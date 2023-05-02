@@ -1,11 +1,11 @@
 public class HelloUniverse {
     public static void main(String... args){
-        String phrase="Aux dernières nouvelles, le nombre total de planètes dans le système solaire est de : ";
-        int nbPlanetes=8;
-        System.out.println(phrase+nbPlanetes);
-        phrase="Il y a quelques années cependant, elles étaient au nombre de : ";
-        nbPlanetes++;
-        System.out.println(phrase+nbPlanetes);
-           }
-
+        int annee=2006;
+        if(annee<2006){
+            System.out.printf("En %d, les planètes du système solaire étaient au nombre de : 9",annee);
+        }
+        else {
+            System.out.printf("En %d, les planètes du système solaire étaient au nombre de : 8",annee);
+        }
+    }
 }
