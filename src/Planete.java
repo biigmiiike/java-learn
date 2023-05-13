@@ -2,10 +2,26 @@ public class Planete {
     String nom;
     String matiere;
     long diametre;
-    void rotation(){
-        System.out.printf("Je suis la planète %s et je tourne sur moi-même. ",nom);
+    int totalVisiteurs;
+    int rotation(int angleDeRotation){
+        return angleDeRotation/360;
     }
-    void revolution(){
-        System.out.printf("Je suis la planète %s et je tourne autour de mon étoile.",nom);
+    int revolution(int angleDeRotation){
+        return angleDeRotation/360;
+    }
+    void acceuillirVaisseau(int nbHumain){
+        totalVisiteurs=totalVisiteurs+nbHumain;
+    }
+    void acceuillirVaisseau(String typeVaisseau){
+        if (typeVaisseau.equals("CHASSEUR")){
+            totalVisiteurs=totalVisiteurs+3;
+        }
+        if (typeVaisseau.equals("FREGATE")){
+            totalVisiteurs=totalVisiteurs+12;
+        }
+        if (typeVaisseau.equals("CROISEUR")){
+            totalVisiteurs=totalVisiteurs+50;
+        }
+
     }
 }

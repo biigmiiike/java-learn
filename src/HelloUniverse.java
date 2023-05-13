@@ -32,12 +32,15 @@ public class HelloUniverse {
         neptune.nom = "Neptune";
         neptune.diametre = 49532;
         neptune.matiere = "Gazeuse";
-
         Planete planeteX = new Planete();
 
-        System.out.println(planeteX.nom+" est une planète "+planeteX.matiere+" avec un diamètre de "+planeteX.diametre+" kilomètres.");
-        neptune.revolution();
-        mars.rotation();
+        System.out.printf("%s a effectué %d tours complets autour de son étoile.\n",neptune.nom,neptune.revolution(-3542));
+        System.out.printf("%s a effectué %d tours complets sur elle-même.\n",mars.nom,mars.revolution(-684));
+        System.out.printf("%s a effectué %d tours complets sur elle-même.\n",venus.nom,venus.revolution(1250));
+
+        mars.acceuillirVaisseau(8);
+        mars.acceuillirVaisseau("FREGATE");
+        System.out.printf("Le nombre d'humains ayant déjà séjourné sur Mars est actuellement de %d.",mars.totalVisiteurs);
     }
 
 }
